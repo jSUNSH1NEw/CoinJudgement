@@ -6,13 +6,12 @@
 </p>
 <br/>
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/smartcontractkit/hardhat-starter-kit)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/jSUNSH1NEw/CoinJudgement)
 
 - [Chainlink Hardhat Starter Kit](#chainlink-hardhat-starter-kit)
 - [Getting Started](#getting-started)
   - [Requirements](#requirements)
   - [Quickstart](#quickstart)
-    - [Typescript](#typescript)
 - [Usage](#usage)
   - [Deploying Contracts](#deploying-contracts)
   - [Run a Local Network](#run-a-local-network)
@@ -33,12 +32,10 @@
 - [Estimaging Gas](#estimaging-gas)
 - [Code Coverage](#code-coverage)
 - [Fuzzing](#fuzzing)
-- [Contributing](#contributing)
-- [Thank You!](#thank-you)
   - [Resources](#resources)
 
-# Chainlink Hardhat Starter Kit
- Implementation of the following 4 Chainlink features using the [Hardhat](https://hardhat.org/) development environment:
+# Chainlink Hardhat starter kit 
+ Implementation of the following 4 Chainlink features using the [Hardhat]
  - [Chainlink Price Feeds](https://docs.chain.link/docs/using-chainlink-reference-contracts)
  - [Chainlink VRF](https://docs.chain.link/docs/chainlink-vrf)
  - [Chainlink Keepers](https://docs.chain.link/docs/chainlink-keepers/introduction/)
@@ -69,8 +66,8 @@ It's recommended that you've gone through the [hardhat getting started documenta
 After installing all the requirements, run the following:
 
 ```bash
-git clone https://github.com/smartcontractkit/hardhat-starter-kit/
-cd hardhat-starter-kit
+git clone https://github.com/jSUNSH1NEw/CoinJudgement
+cd CoinJudgemenT
 ```
 Then:
 ```
@@ -125,33 +122,24 @@ yarn hardhat node
 
 You'll get a local blockchain, private keys, contracts deployed (from the `deploy` folder scripts), and an endpoint to potentially add to an EVM wallet. 
 
-## Using a Testnet or Live Network (like Mainnet or Polygon)
+## Using a Testnet or Live Network (like Polygon Mainnet or Mumbai)
 
-In your `hardhat.config.js` you'll see section like:
-
-```
-module.exports = {
-  defaultNetwork: "hardhat",
-  networks: {
-```
-
-This section of the file is where you define which networks you want to interact with. You can read more about that whole file in the [hardhat documentation.](https://hardhat.org/config/)
 
 To interact with a live or test network, you'll need:
 
 1. An rpc URL 
 2. A Private Key
-3. ETH & LINK token (either testnet or real)
+3. MATIC & LINK token (either testnet or real )
 
-Let's look at an example of setting these up using the Rinkeby testnet. 
+Let's look at an example of setting these up using the mumbai testnet. 
 
 ### Rinkeby Ethereum Testnet Setup
 
-First, we will need to set environment variables. We can do so by setting them in our `.env` file (create it if it's not there). You can also read more about [environment variables](https://www.twilio.com/blog/2017/01/how-to-set-environment-variables.html) from the linked twilio blog. You'll find a sample of what this file will look like in `.env.example`
+
 
 > IMPORTANT: MAKE SURE YOU'D DONT EXPOSE THE KEYS YOU PUT IN THIS `.env` FILE. By that, I mean don't push them to a public repo, and please try to keep them keys you use in development not associated with any real funds. 
 
-1. Set your `RINKEBY_RPC_URL` [environment variable.](https://www.twilio.com/blog/2017/01/how-to-set-environment-variables.html)
+1. Set your `MUMBAI_RPC_URL` [environment variable.](https://www.twilio.com/blog/2017/01/how-to-set-environment-variables.html)
 
 You can get one for free from [Alchmey](https://www.alchemy.com/), [Infura](https://infura.io/), or [Moralis](https://moralis.io/speedy-nodes/). This is your connection to the blockchain. 
 
@@ -299,7 +287,7 @@ yarn hardhat read-data --contract insert-contract-address-here --network network
 
 
 ## VRF Get a random number
-The VRFConsumer contract has two tasks, one to request a random number, and one to read the result of the random number request. To start, go to [VRF Subscription Page](https://vrf.chain.link/rinkeby) and create the new subscription. Save your subscription ID and put it in `.env` file as `VRF_SUBSCRIPTION_ID`:
+The VRFConsumer contract has two tasks, one to request a random number, and one to read the result of the random number request. To start, go to [VRF Subscription Page](https://vrf.chain.link/mumbai) and create the new subscription. Save your subscription ID and put it in `.env` file as `VRF_SUBSCRIPTION_ID`:
 
 ```bash
 VRF_SUBSCRIPTION_ID=subscription_id
@@ -358,30 +346,6 @@ This will [lint](https://stackoverflow.com/questions/8503559/what-is-linting) yo
 yarn lint:fix
 ```
 
-# Code Formating
-
-This will format both your javascript and solidity to look nicer. 
-
-```
-yarn format
-```
-
-# Estimaging Gas
-
-To estimate gas, just set a `REPORT_GAS` environment variable to true, and then run:
-
-```
-yarn hardhat test
-```
-
-If you'd like to see the gas prices in USD or other currency, add a `COINMARKETCAP_API_KEY` from [Coinmarketcap](https://coinmarketcap.com/api/documentation/v1/).
-
-# Code coverage
-
-To see a measure in percent of the degree to which the smart contract source code is executed when a particular test suite is run, type
-```
-yarn coverage
-```
 
 # Fuzzing
 
@@ -405,9 +369,6 @@ To exit Echidna type
 exit
 ```
 
-# Contributing
-
-Contributions are always welcome! Open a PR or an issue!
 
 # Thank You!
 
