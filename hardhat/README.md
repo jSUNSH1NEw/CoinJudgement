@@ -1,8 +1,7 @@
 <br/>
 <p align="center">
-<a href="https://chain.link" target="_blank">
-<img src="./box-img-lg2.png" width="225" alt="sunsh1ne logo">
-</a>
+
+<img src="./box-img-lg2.jpg" width="225" alt="sunsh1ne logo">
 </p>
 <br/>
 
